@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea al inicio para permitir scroll en móviles */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 10px; /* Ajusta el padding para pantallas pequeñas */
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px; /* Reduce el padding para pantallas pequeñas */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Mantiene un máximo para pantallas grandes */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px; /* Reduce el margen */
+    font-size: 1.8em; /* Ajusta el tamaño del título para móvil */
+}
+
+.question {
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px; /* Reduce el margen */
+}
+
+.question p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1em; /* Asegura un tamaño legible */
+}
+
+.options label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+    padding: 10px 12px; /* Aumenta el padding para facilitar el toque */
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    font-size: 0.95em; /* Ajusta el tamaño de la fuente para opciones */
+    line-height: 1.4; /* Mejora la legibilidad del texto en opciones */
+}
+
+.options label:hover {
+    background-color: #dcdcdc;
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+    /* Para mejorar la visibilidad en móviles, se puede ajustar el tamaño */
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño del radio button */
+    vertical-align: middle; /* Alinea con el texto */
+}
+
+/* Colores de feedback */
+.correct-answer {
+    background-color: #d4edda; /* Verde claro */
+    border: 1px solid #28a745; /* Verde */
+}
+
+.incorrect-answer {
+    background-color: #f8d7da; /* Rojo claro */
+    border: 1px solid #dc3545; /* Rojo */
+}
+
+.selected-correct {
+    background-color: #28a745; /* Verde oscuro */
+    color: white;
+}
+
+.selected-incorrect {
+    background-color: #dc3545; /* Rojo oscuro */
+    color: white;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em; /* Ajusta el tamaño del texto del botón */
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+#results {
+    margin-top: 25px; /* Reduce el margen */
+    padding: 15px; /* Reduce el padding */
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#results p {
+    font-size: 1.1em; /* Ajusta el tamaño de la fuente */
+    font-weight: bold;
+    color: #333;
+}
+
+/* Media Queries para ajustes específicos de pantallas pequeñas */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Menos padding en los bordes para móviles muy pequeños */
+    }
+
+    .container {
+        padding: 15px; /* Más compacto */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Título aún más pequeño en pantallas muy pequeñas */
+    }
+
+    .question p {
+        font-size: 0.95em;
+    }
+
+    .options label {
+        padding: 8px 10px; /* Opciones ligeramente más compactas */
+        font-size: 0.9em;
+    }
+}
