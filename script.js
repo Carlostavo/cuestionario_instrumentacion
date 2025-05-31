@@ -652,7 +652,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "1-1005",
                 "1001-4094"
             ],
-            correctAnswer: "1-1005"
+            correctAnswer: "1-1001"
         },
         {
             question: "¿Qué tipo de VLAN transporta tráfico no etiquetado en un enlace troncal?",
